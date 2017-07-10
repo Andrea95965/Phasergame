@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>HOME</title>
+<style>
+    body {margin:0;}
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+  <script src = "phaser.min.js"></script>
+  <script src = "mainState.js"></script>
+  <script src = "boot.js"></script>
+  <script src = "preload.js"></script>
+  <script src = "gametitle.js"></script>
+  <script src = "gameover.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+      <a href="../finalWebsite/index.html">Home</a>
+      <a href="../finalWebsite/hobbies.html">Hobbies</a>
+      <a href="../finalWebsite/favorite-subject.html">Favorite Subject</a>
+      <a href="../finalWebsite/after-highschool.html">After Highschool</a>
+      <a href="../finalWebsite/ten-year.html">In 10 years</a>
+      <a href="../Phaser/index.html">lava game</a>
+      <a href="../Adventure-game/adventure.html">adventure game</a>
+    </div>
+    <script>
+      (function(){
+      var game = new Phaser.Game(500, 200, Phaser.CANVAS, "game");
+          game.state.add("state1",mainState);
+          game.state.add("Boot",boot);
+          game.state.add("Preload",preload);
+          game.state.add("GameTitle",gameTitle);
+          game.state.add("GameOver",gameOver);
+          game.state.start("Boot");
+      })();  
+        
+    </script>
+        
+    
+   
+    
+   
+    
+</body>
+
+</html>
